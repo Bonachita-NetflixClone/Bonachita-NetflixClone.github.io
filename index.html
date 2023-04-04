@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="res.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+</head> 
+<body>
+
+  <audio autoplay loop id="Audio">
+    <source src="wed.mp3" type="audio/mpeg">
+    <a href="wed.mp3"></a>
+
+  </audio>
+
+    <div style="position: relative;">
+    <!-- NavBar-->
+    <nav class="navbar navbar-expand-lg netflix-navigationbar netflix-padding-l netflix-padding-r ">
+        <div class="container-fluid">
+
+          <div class="netflix-row">
+            <section class="left d-flex align-items-center">
+                <a class="navbar-brand" href="#"> <img src="img/nlogo.png" alt="Netflix logo"> </a>
+            <!--dropdown-->
+            <div class="netflix-dropdown-box dropdown" id="button1" style="background-color: transparent;">
+                <button class="netflix-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Browse
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Home</a></li>
+                  <li><a class="dropdown-item" href="#">TV Shows</a></li>
+                  <li><a class="dropdown-item" href="#">Movies</a></li>
+                  <li><a class="dropdown-item" href="#">News & Popular</a></li>
+                  <li><a class="dropdown-item" href="#">My List</a></li>
+                  <li><a class="dropdown-item" href="#">Browse by Languages</a></li>
+                </ul>
+              </div>
+              <!--tabs-->
+              <div class="nav">
+                <section>
+                    <button>Home</button>
+                    <button>TV Shows</button>
+                    <button>Movies</button>
+                    <button>News & Popular</button>
+                    <button>My List</button>
+                    <button>Browse by Languages</button>
+                </section>
+              </div>
+            </section>
+            
+          <nav class="btn-group" id="right" style="align-items: right; background-color: transparent;">
+          <div class="content" style="left:20; top:19px" >
+            <i class="bi bi-search" id="search"></i>
+            <i class="bi bi-bell-fill" id="bell"></i>
+            <button id="button1" class="dropdown-toggle" type="button" data-bs-toggle="dropdown" style="background-color: transparent;">
+              <i class="bi bi-person-fill"></i>
+            </button>
+            <ol class="dropdown-menu" style="background-color:rgba(129, 127, 127, 0.123);">
+              <li class="column">
+                <a class="dropdown-item" href="#" style="font-size: 12px; color: white;">Kids</a>
+              </li>
+              <li class="column">
+                <a class="dropdown-item" href="#" style="font-size: 12px; color: white;">Manage Profiles</a>
+              </li>
+              <li class="column">
+                <a class="dropdown-item" href="#" style="font-size: 12px; color: white;">Transfer Profiles</a>
+              </li>
+              <li class="column">
+                <a class="dropdown-item" href="#" style="font-size: 12px; color: white;">Account</a>
+              </li>
+              <li class="column">
+                <a class="dropdown-item" href="#" style="font-size: 12px; color: white;">Help Center</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider  border-bottom">
+              </li>
+              <li class="column">
+                <a class="dropdown-item" href="#" style="font-size: 12px;color: white;">Sign out of Netflix</a>
+              </li>
+            </ol>
+          </div>
+        </nav>
+          
+        </div>
+      </nav>
+
+<div class="" >
+    <section class="home-vid">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <video src="wednesday.mp4" autoplay muted loop></video>
+        <div class="content">
+                <section class="left" id="wednesdayvideo">
+                    <img src="img/wed.png" alt="">
+                    <p style="color: white; margin-right: 150px;"> To solve the mystery that embroiled her parents 25 years ago </p>
+                
+                    <div class="d-flex mt-2">
+                      <button class="btn btn-light m-2" ><i class="bi bi-play-fill" style="color: black; padding: 0%;"></i> Play Now </button>
+                      <button class="btn btn-secondary m-2"><i class="bi bi-info-circle" style=" padding: 0%;"></i> More Info</button>
+                    </div>
+                </section>
+        </div>
+    </section>    
+
+</div>
+
+<!--SLIDER-->
+
+<div class="slider-box" >
+  <section class="container-fluid slider">
+    <div class="d-flex justify-content-between margin-right">
+      <p class="text-white"> <b>Only On Netflix</b> </p>
+      <div class="">
+        <button  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active tab-change-btn" aria-current="true" aria-label="Slide 1"></button>
+        <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" style="position: relative; overflow: visible;">
+        <div class="carousel-item active">
+          <section class="d-flex" style="">
+            <div class="card" >
+              <img src="img/1.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                  <section class="d-flex justify-content-between">
+                    <div>
+                      <i class="bi bi-play-circle-fill card-icon"  ></i>
+                      <i  class="bi bi-plus-circle card-icon"></i>
+                    </div>
+                    <div>
+                      <i class="bi bi-arrow-down-circle card-icon"></i>
+                    </div>
+                  </section>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/2.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card">
+              <img src="img/3.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            <div class="card-body"> 
+                  <section class="d-flex justify-content-between">
+                    <div>
+                      <i class="bi bi-play-circle-fill card-icon"  ></i>
+                      <i  class="bi bi-plus-circle card-icon"></i>
+                    </div>
+                    <div>
+                      <i class="bi bi-arrow-down-circle card-icon"></i>
+                    </div>
+                  </section>
+              </div>
+            </div>
+            <div class="card" >
+              <img src="img/4.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="card" >
+              <img src="img/5.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="card" >
+              <img src="img/6.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="carousel-item">
+          <section class="d-flex">
+            <div class="card">
+              <img src="img/7.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="card" >
+              <img src="img/8.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/9.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/10.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/11.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="container-fluid  slide2">
+    <section class="d-flex justify-content-between margin-right margin-title">
+      <p class="text-white"> <b>Trending</b> </p>
+      <div class="">
+        <button  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active tab-change-btn" aria-current="true" aria-label="Slide 1"></button>
+        <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </section>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" style="position: relative; overflow: visible;">
+        <div class="carousel-item active">
+          <section class="d-flex" >
+            <div class="card" >
+              <img src="img/12.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                  <section class="d-flex justify-content-between">
+                    <div>
+                      <i class="bi bi-play-circle-fill card-icon"  ></i>
+                      <i  class="bi bi-plus-circle card-icon"></i>
+                    </div>
+                    <div>
+                      <i class="bi bi-arrow-down-circle card-icon"></i>
+                    </div>
+                  </section>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/13.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card">
+              <img src="img/14.png" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div> <div class="card-body"> 
+                  <section class="d-flex justify-content-between">
+                    <div>
+                      <i class="bi bi-play-circle-fill card-icon"  ></i>
+                      <i  class="bi bi-plus-circle card-icon"></i>
+                    </div>
+                    <div>
+                      <i class="bi bi-arrow-down-circle card-icon"></i>
+                    </div>
+                  </section>
+              </div>
+            </div>
+            <div class="card" >
+              <img src="img/15.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/16.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/17.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+          </section>
+        </div>
+        <div class="carousel-item">
+          <section class="d-flex ">
+            <div class="card">
+              <img src="img/18.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/19.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card">
+              <img src="img/20.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/21.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/22.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/23.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+          </section>
+        </div> 
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="container-fluid  slide3">
+    <section class="d-flex justify-content-between margin-right margin-title2">
+      <p class="text-white"> <b>Top Searches</b> </p>
+      <div class="">
+        <button  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active tab-change-btn" aria-current="true" aria-label="Slide 1"></button>
+        <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </section>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      
+      <div class="carousel-inner" style="position: relative; overflow: visible;">
+        <div class="carousel-item active">
+          <section class="d-flex " >
+            <div class="card" >
+              <img src="img/24.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                  <section class="d-flex justify-content-between">
+                    <div>
+                      <i class="bi bi-play-circle-fill card-icon"  ></i>
+                      <i  class="bi bi-plus-circle card-icon"></i>
+                    </div>
+                    <div>
+                      <i class="bi bi-arrow-down-circle card-icon"></i>
+                    </div>
+                  </section>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/25.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                     </div>
+                  </section>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/26.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div> 
+            <div class="card-body"> 
+                  <section class="d-flex justify-content-between">
+                    <div>
+                      <i class="bi bi-play-circle-fill card-icon"  ></i>
+                      <i  class="bi bi-plus-circle card-icon"></i>
+                    </div>
+                    <div>
+                      <i class="bi bi-arrow-down-circle card-icon"></i>
+                    </div>
+                  </section>
+              </div>
+            </div>
+            <div class="card" >
+              <img src="img/27.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/28.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/29.webp" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+          </section>
+        </div>
+        <div class="carousel-item">
+          <section class="d-flex">
+            <div class="card">
+              <img src="img/30.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/31.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card">
+              <img src="img/32.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/33.webp" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/34.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+            </div>
+            <div class="card" >
+              <img src="img/35.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> 
+                <section class="d-flex justify-content-between">
+                  <div>
+                    <i class="bi bi-play-circle-fill card-icon"  ></i>
+                    <i  class="bi bi-plus-circle card-icon"></i>
+                  </div>
+                  <div>
+                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                  </div>
+                </section>
+            </div>
+          
+          </div>
+        </div>
+
+         
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!-- footer-->
+
+<!-- footer  -->
+<div class="container footer">
+  <div class="row">
+    <div class="col-md-10 mx-auto" style="margin-top: 50px;">
+        <div class="row">
+          <div class="col-md-3">
+                <ul>
+                  <li>Audio Description</li>
+                  <li>Investor Relations</li>
+                  <li>Legal Notices</li>
+                  
+                </ul>
+          </div>
+          <div class="col-md-3">
+            <ul>
+              <li>Help Center</li>
+              <li>Jobs</li>
+              <li> Cookie Preferences </li>
+            </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li>Gift Cards</li>
+          <li>Terms of Use</li>
+          <li>Corporate Information</li>
+        </ul>
+       </div>
+       <div class="col-md-3">
+        <ul>
+          <li>Media Center</li>
+          <li>Privacy</li>
+          <li>Contact Us</li>
+    
+        </ul>
+       </div>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10 mx-auto">
+      <div class="row">
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<!-- javascript file-->
+<script src="javascript.js"></script>
+
+
+<!-- BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" 
+        integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script> -->
+</body>
+</html>

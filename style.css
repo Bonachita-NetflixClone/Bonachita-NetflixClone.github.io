@@ -1,0 +1,295 @@
+body{
+    background-color: black; 
+    overflow-x: hidden;
+    position: relative;
+}
+
+.netflix-padding-l{
+    padding-left: 70px;
+    
+}
+
+.netflix-padding-r{
+    padding-right: 170px;
+}
+
+.netflix-navigationbar{
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+    transition: background 0.2s linear;
+}
+
+.netflix-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+}
+
+.navbar-brand img{
+    width: 100px;
+}
+
+.netflix-dropdown-box{
+    display: none;
+}
+
+.netflix-dropdown{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 9px;
+}
+
+.netflix-dropdown-box .dropdown-menu{
+    background-color: rgba(0, 0, 0, 0.795);
+    font-size: 10px !important;
+    color: white;
+    margin-left: -50px;
+    border-top: 3px solid#fff;
+    margin-top: 30px;
+}
+
+.netflix-dropdown-box .dropdown-menu .dropdown-item{
+    color: rgba(255, 255, 255, 0.767);
+    text-align: center;
+    width: 250px;
+    font-size: 12px;
+    padding: 10px 20px;
+}
+
+.netflix-dropdown-box .dropdown-menu .dropdown-item:hover{
+    background-color: rgba(255, 255, 255, 0.13);
+    color: white;
+}
+
+.nav{
+    display: block;
+    align-items: center;
+}
+
+.nav button{
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.904);
+    border: none;
+    font-size: 10;
+}
+
+.nav button:hover{
+    color: white;
+}
+
+i{
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prof{
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 4px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.column{
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+#right {
+    background: rgb(010,010,010);
+    color: rgb(255, 255, 255);
+
+}
+
+#button1 {
+    opacity: 100;
+    background-color: rgb(010,010,010);
+    margin: 0;
+    border: 0;
+    
+  }
+
+  .dropdown-menu{
+    opacity: 65%;
+  }
+
+  .dropdown-item:hover{
+    display: none;
+  }
+
+
+.home-vid{
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+
+.home-vid .top{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to top, transparent, black);
+}
+
+.home-vid .bottom{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to bottom, transparent, black);
+}
+
+.home-vid video{
+    width: 100%;
+}
+
+.home-vid .content{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    /* background-color: #fff; */
+    z-index: 100;
+    display: flex;
+}
+
+
+
+
+
+
+.slider{
+    position: absolute;
+    top: 600px ;
+    z-index: 500;
+    /* margin-left: 80px; */
+  
+}
+
+
+
+.slider2{
+    position: absolute;
+    top: 800px ;
+    z-index: 500;
+}
+
+.slider3{
+    position: absolute;
+    top: 1000px ;
+    z-index: 800;
+}
+
+
+.card{
+    width: 250px;
+    background-color: #141414;
+    border-radius: 4px;
+    transition: 0.2s linear;
+    margin: 3px;
+    position: relative;
+}
+
+
+.card:hover{
+    transform: scaleX(1.4) scaleY(1.4);
+    z-index: 10;
+}
+
+
+.card-body{
+    display: none;
+    /* height: 0px; */
+    padding: 10px 15px;
+    position: absolute;
+    background-color: #141414;
+    top: 120px;
+    width: 100%;
+}
+
+
+.card-icon{
+    color: #fff;
+    padding: 0px !important;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card:hover > .card-body{
+    display: block;
+    /* height: max-content !important; */
+}
+
+.carousel-control-prev{
+    display: none;
+}
+
+.carousel-control-next{
+    display: none;
+}
+
+.tab-change-btn{
+    border: none;
+    width: 30px !important;
+}
+
+
+.margin-right{
+    margin-right: 100px;
+}
+
+.netflix-card-text{
+    font-size: 12px ;
+}
+
+.position-slider2{
+    top: 20px !important;
+    position: absolute !important;
+}
+
+.margin-title2{
+    margin-top: 33px;
+}
+
+.position-slider3{
+    top: 20px !important;
+    position: absolute !important;
+}
+
+
+.footer{
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+ul{
+    list-style: none;
+    font-size: 15px ;
+    color: rgba(255, 255, 255, 0.367);
+    font-weight: 100;
+    cursor: pointer;
+}
+
+
+.service-btn{
+    background-color: transparent;
+     margin-left: 30px;
+      color: rgba(255, 255, 255, 0.367);
+      border: 1px solid rgba(255, 255, 255, 0.367);
+      font-size: 15px;
+      font-weight: 100;
+}
+
+.button1{
+    size: 15px;
+}
